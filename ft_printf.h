@@ -6,7 +6,7 @@
 /*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 20:34:41 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/24 21:12:40 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/25 21:44:13 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 int	ft_printf(const char *imput, ...);
 int print_char(int c);
 int print_string(char *s);
-int print_hex(unsigned int hex, imput);
+int print_hex(unsigned int ap, int imput);
+int print_number(int number);
 
 #endif
