@@ -6,7 +6,7 @@
 #    By: agorski <agorski@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 10:23:20 by agorski           #+#    #+#              #
-#    Updated: 2024/04/24 11:39:17 by agorski          ###   ########.fr        #
+#    Updated: 2024/04/25 15:18:34 by agorski          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC= cc
 CFLAGS= -Wall -Wextra -Werror
 LIBTFDIR= ./libft
 
-SRC= ft_printf.c print_char.c print_string.c
+SRC= ft_printf.c print_char.c print_string.c print_hex.c print_number.c
 
 OBJ= $(SRC:%.c=%.o)
 

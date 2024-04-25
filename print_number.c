@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex.c                                        :+:      :+:    :+:   */
+/*   print_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agorski <agorski@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 14:50:11 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/25 14:20:18 by agorski          ###   ########.fr       */
+/*   Created: 2024/04/25 15:18:11 by agorski           #+#    #+#             */
+/*   Updated: 2024/04/25 15:38:22 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int static	ft_print_hex(unsigned int ap, char *template, int len)
+int static	ft_numbet_len(int number)
 {
-	if (ap <= 15)
-		len += print_char(template[ap % 16]);
-	else
-	{
-		len = ft_print_hex(ap / 16, template, len);
-		len += print_char(template[ap % 16]);
-	}
-	return (len);
+    int len;
+    
 }
 
-int	print_hex(unsigned int ap, int imput)
+int	print_number(int number)
 {
-	char	*template;
-
-	if (imput == 'x')
-		template = "0123456789abcdef";
-	else
-		template = "0123456789ABCDEF";
-	return (ft_print_hex(ap, template, 0));
+	int i;
+	i = 0;
+	ft_putnbr_fd(number, 1);
+	i = ft_number_len(number);
 }
