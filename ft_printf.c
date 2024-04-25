@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agorski <agorski@student.42.fr>            +#+  +:+       +#+        */
+/*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:40:09 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/24 15:56:07 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:09:17 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int static	ft_print_sign(int imput, va_list ap)
 	// else if (imput == 'u')
 	// i =
 	else if (imput == 'x' || imput == 'X')
-		i = print_hex(va_arg(ap, unsigned int));
+		i = print_hex(va_arg(ap, unsigned int), imput);
 	return (i);
 }
 

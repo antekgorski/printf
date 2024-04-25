@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agorski <agorski@student.42.fr>            +#+  +:+       +#+        */
+/*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:50:11 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/24 15:02:25 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:45:18 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int print_hex(unsigned int to_hex, int imput)
+{
+    
+}
