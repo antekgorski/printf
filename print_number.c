@@ -3,25 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   print_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agorski <agorski@student.42.fr>            +#+  +:+       +#+        */
+/*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:18:11 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/25 15:38:22 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/25 22:53:38 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int static	ft_numbet_len(int number)
+static int	ft_number_len(int number)
 {
-    int len;
-    
+	int	len;
+
+	len = 0;
+	if (number == 0)
+		return (1);
+	if (number < 0)
+		len++;
+	while (number != 0)
+	{
+		number /= 10;
+		len++;
+	}
+	return (len);
 }
 
 int	print_number(int number)
 {
-	int i;
-	i = 0;
 	ft_putnbr_fd(number, 1);
-	i = ft_number_len(number);
+	return (ft_number_len(number));
 }

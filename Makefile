@@ -6,7 +6,7 @@
 #    By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 10:23:20 by agorski           #+#    #+#              #
-#    Updated: 2024/04/25 21:44:35 by agorski          ###   ########.fr        #
+#    Updated: 2024/04/26 13:20:02 by agorski          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC= cc
 CFLAGS= -Wall -Wextra -Werror
 LIBTFDIR= ./libft
 
-SRC= ft_printf.c print_char.c print_string.c print_hex.c print_number.c
+SRC= ft_printf.c print_char.c print_string.c print_hex.c print_number.c print_unsigned.c
 
 OBJ= $(SRC:%.c=%.o)
 
@@ -48,7 +48,14 @@ fcleanlibft:
 allclean: clean cleanlibft
 
 allfclean: fclean fcleanlibft
+	rm a.out
 
 re: fclean fcleanlibft all
 
-.PHONY: all libft clean cleanlibft fclean fcleanlibft allclean allfclean re
+testl:
+	nm libftprintf.a
+
+test:
+	cc ft_printf.c -L. -lftprintf
+
+.PHONY: all libft clean cleanlibft fclean fcleanlibft allclean allfclean re test testl

@@ -6,15 +6,14 @@
 /*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:40:09 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/25 21:42:07 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/26 13:19:17 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
-//#include <stdio.h>
-
-int static	ft_print_sign(int imput, va_list ap)
+static int	ft_print_sign(int imput, va_list ap)
 {
 	int	i;
 
@@ -27,8 +26,8 @@ int static	ft_print_sign(int imput, va_list ap)
 	// i =
 	else if (imput == 'd' || imput == 'i')
 		i = print_number(va_arg(ap, int));
-	// else if (imput == 'u')
-	// i =
+	else if (imput == 'u')
+		i = print_unsigned(va_arg(ap, unsigned int));
 	else if (imput == 'x' || imput == 'X')
 		i = print_hex(va_arg(ap, unsigned int), imput);
 	return (i);
@@ -61,15 +60,24 @@ int	ft_printf(const char *imput, ...)
 
 int	main(void)
 {
-	int	i;
+	//int				i;
+	//int				j;
+	int				k;
+	unsigned int	l;
 
-	i = 412;
-	// ft_printf("1234567890qwertyuiopas %% dfghjklzxcvbnm");
-	// ft_printf("1234567890qwertyuiopas %% %c dfghjklzxcvbnm", 'W');
-	// ft_printf("1234567890qwertyuiopas %s dfghjklzxcvbnm", "string12345");
-	// ft_printf("TESTtestTEST %x TESTtestTEST", i);
-	// ft_printf("TESTtestTEST %X TESTtestTEST", i);
-	// printf("TESTtestTEST %x TESTtestTEST", i);
-	// printf("TESTtestTEST %X TESTtestTEST", i);
+	l = 123456789;
+	//j = 235;
+	//i = 412;
+	k = 0;
+	// k = ft_printf("123456789");
+	// k = ft_printf("1234567890qwertyuiopas %% %c dfghjklzxcvbnm", 'W');
+	// k = ft_printf("1234567890qwertyuiopas %s dfghjklzxcvbnm", "string12345");
+	// k = ft_printf("TESTtestTEST %x TESTtestTEST", i);
+	// k = ft_printf("TESTtestTEST %X TESTtestTEST", i);
+	// k = printf("TESTtestTEST %x TESTtestTEST", i);
+	// k = printf("TESTtestTEST %X TESTtestTEST", i);
+	//k = ft_printf("123 %d 123 %i", i, j);
+	k = ft_printf("123 %u 123 %u", l, l);
+	ft_printf("%i", k);
 	return (0);
 }

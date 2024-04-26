@@ -1,36 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex.c                                        :+:      :+:    :+:   */
+/*   print_unsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 14:50:11 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/25 21:51:44 by agorski          ###   ########.fr       */
+/*   Created: 2024/04/25 23:21:14 by agorski           #+#    #+#             */
+/*   Updated: 2024/04/26 11:57:40 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_print_hex(unsigned int ap, char *template, int len)
+static int	ft_number_len(int number)
 {
-	if (ap <= 15)
-		len += print_char(template[ap % 16]);
-	else
+	int	len;
+
+	len = 0;
+	if (number == 0)
+		return (1);
+	if (number < 0)
+		len++;
+	while (number != 0)
 	{
-		len = ft_print_hex(ap / 16, template, len);
-		len += print_char(template[ap % 16]);
+		number /= 10;
+		len++;
 	}
 	return (len);
 }
 
-int	print_hex(unsigned int ap, int imput)
+static void	write_function(char c)
 {
-	char	*template;
+	write(1, &c, 1);
+}
 
-	if (imput == 'x')
-		template = "0123456789abcdef";
+static void	ft_putunsigned(unsigned int n)
+{
+	if (n >= 10)
+	{
+		ft_putunsigned(n / 10);
+		ft_putunsigned(n % 10);
+	}
 	else
-		template = "0123456789ABCDEF";
-	return (ft_print_hex(ap, template, 0));
+		write_function(n + '0');
+}
+
+int	print_unsigned(unsigned int number)
+{
+	ft_putunsigned(number);
+	return (ft_number_len(number));
 }

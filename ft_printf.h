@@ -6,7 +6,7 @@
 /*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 20:34:41 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/25 21:44:13 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/26 11:43:21 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int print_char(int c);
 int print_string(char *s);
 int print_hex(unsigned int ap, int imput);
 int print_number(int number);
+int print_unsigned(unsigned int number);
 
 #endif
