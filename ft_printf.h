@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agorski <agorski@student.42.fr>            +#+  +:+       +#+        */
+/*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 20:34:41 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/30 16:16:36 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/30 23:37:26 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	print_string(char *s);
 int	print_hex(unsigned long int ap, int imput);
 int	print_number(int number);
 int	print_unsigned(unsigned int number);
-int	print_pointer(void *);
+int	print_pointer(void *ptr);
 
 #endif

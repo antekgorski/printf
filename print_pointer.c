@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_pointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agorski <agorski@student.42.fr>            +#+  +:+       +#+        */
+/*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:20:44 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/30 16:17:24 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/30 23:36:54 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	print_pointer(void *ptr)
 {
-	int len;
+	int		len;
+	char	x;
+
 	len = 0;
-	char x;
 	x = 'x';
 	if (!ptr)
 		return (write(1, "(nil)", 5));
