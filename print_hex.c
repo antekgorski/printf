@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+        */
+/*   By: agorski <agorski@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:50:11 by agorski           #+#    #+#             */
-/*   Updated: 2024/04/25 21:51:44 by agorski          ###   ########.fr       */
+/*   Updated: 2024/04/30 16:16:12 by agorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_print_hex(unsigned int ap, char *template, int len)
+static int	ft_print_hex(unsigned long int ap, char *template, int len)
 {
 	if (ap <= 15)
 		len += print_char(template[ap % 16]);
@@ -24,7 +24,7 @@ static int	ft_print_hex(unsigned int ap, char *template, int len)
 	return (len);
 }
 
-int	print_hex(unsigned int ap, int imput)
+int	print_hex(unsigned long int ap, int imput)
 {
 	char	*template;
 

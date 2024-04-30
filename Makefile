@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: agorski <agorski@student.42warsaw.pl>      +#+  +:+       +#+         #
+#    By: agorski <agorski@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 10:23:20 by agorski           #+#    #+#              #
-#    Updated: 2024/04/26 13:20:02 by agorski          ###   ########.fr        #
+#    Updated: 2024/04/30 12:31:11 by agorski          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CC= cc
 CFLAGS= -Wall -Wextra -Werror
 LIBTFDIR= ./libft
 
-SRC= ft_printf.c print_char.c print_string.c print_hex.c print_number.c print_unsigned.c
+SRC= ft_printf.c print_char.c print_string.c print_hex.c print_number.c \
+print_unsigned.c print_pointer.c
 
 OBJ= $(SRC:%.c=%.o)
 
